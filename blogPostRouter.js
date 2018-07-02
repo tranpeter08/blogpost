@@ -27,6 +27,7 @@ router.post('/', jsonParser, (req, res)=>{
 })
 
 router.put('/:id', jsonParser, (req,res)=>{
+    console.log('Request Parameter ID', req.param.id);
     const requiredFields = ['title', 'content', 'author', "id"];
     for (let i=0; i<requiredFields.length; i++) {
         const field = requiredFields[i];
